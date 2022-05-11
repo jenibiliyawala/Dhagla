@@ -1,58 +1,68 @@
 <!DOCTYPE html>
-<html>
-<head>
-	<meta charset="utf-8"/>
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Sign in</title>
-	<link rel="stylesheet" type="text/css" href="CSS/contactus.css">
-	<link rel="stylesheet" type="text/css" href="CSS/header.css">
-	<link rel="stylesheet" type="text/css" href="CSS/footer.css">
-	<link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-	<link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
-</head>
-<body>
-	<article>
-		<!-- Header ends here -->
-		<header>
-			<section class="top-head" > 
-				<div><a class="btn btn-primary btn-xs" href="mailto:jenibiliyawala@yahoo.com">jenibiliyawala@yahoo.com</a></div>
-				<div class="phdiv"><a href="tel:7383553322">7383553322</a></div>
-				<div>
-					<i class="fa fa-user"></i>
-					<span>
-						<a href="login.html">Login</a> /
-						<a href="signup.html">Sign Up</a>
-					</span>
-				</div>
-			</section>
+<html lang="en">
+	<head>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+		<!-- <script> 
+			$(function(){ $("head").load("header.html") });
+		</script> -->
+		<link rel="stylesheet" type="text/css" href="CSS/contactus.css">
+	
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+		<meta name="description" content="J3-K-RAM GROUP OF COMPANY" />
+		<meta name="author" content="DHAGLA - Jeni Biliyawala" />
+		<title>Buy Customised Products | Dhagla</title>
+		<!-- Favicon-->
+		<link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+		<!-- Bootstrap icons-->
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
+		<!-- Core theme CSS (includes Bootstrap)-->
+		<link href="css/styles.css" rel="stylesheet" />
 
-			<section class="logo-div">
-				<div><img src="image/logo.png" class="logo-img"></div>
-				<div><i class="fa fa-shopping-cart"></i> cart</div>
-			</section>
-			
-			<nav class="main-menu">
-				<ul>
-					<li><a href="index.html">Home</a></li>
-					<li><a href="shop.html">Shop</a></li>
-					<li><a href="shop.html">Collection</a>
-						<ul class="inner-ul">
-							<li><a href="shop.html?type=men">Men's</a></li>
-							<li><a href="shop.html?type=female">Women's</a></li>
-						</ul>
-					</li>
-					<li><a class="active" href="contactus.html">Contact us</a></li>
-				</ul>
-			</nav>
-		</header>
-		<!-- Header ends here -->
+		<!-- Flipkart simbol -->
+		<script src="https://code.iconify.design/2/2.2.1/iconify.min.js"></script>
+	</head>
+	<body>
+		<!-- Navigation-->
+		<nav class="navbar navbar-expand-lg navbar-light bg-dark">
+			<div class="container px-4 px-lg-5">
+				<img src="assets/image/dhagla.png" class="logo-img"  height="60">
+				<!-- <a class="navbar-brand" href="#!">Dhagla™</a> -->
+				<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+				<div class="collapse navbar-collapse" id="navbarSupportedContent">
+					<ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-lg-4">
+						<li class="nav-item"><a class="nav-link" style="color:white;" aria-current="page" href="index.html">Home</a></li>
+						<li class="nav-item"><a class="nav-link active" style="color:white;" href="#">Contact us</a></li>
+						<!--
+						<li class="nav-item dropdown">
+							<a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Shop</a>
+							<ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+								<li><a class="dropdown-item" href="#!">All Products</a></li>
+								<li><hr class="dropdown-divider" /></li>
+								<li><a class="dropdown-item" href="#!">Popular Items</a></li>
+								<li><a class="dropdown-item" href="#!">New Arrivals</a></li>
+							</ul>
+						</li>
+						-->
+					</ul>
+					<!--
+					<form class="d-flex">
+						<button class="btn btn-outline-dark" type="submit">
+							<i class="bi-cart-fill me-1"></i>
+							Cart
+							<span class="badge bg-dark text-white ms-1 rounded-pill">0</span>
+						</button>
+					</form>
+					-->
+				</div>
+			</div>
+		</nav>
 
 		<!-- contact us mail send start -->
 		<section class="main-top">
 			<p class="sign" align="center">Contact us</p>
-			<form class="form1" method="GET" action="mailto:jenibiliyawala@gmail.com" enctype="text/plain">
-				<input class="un " type="text" align="center" name="name" placeholder="Name">
-				<input class="un " type="email" align="center" name="mail" placeholder="Email">
+			<form class="form1" method="GET" action="mailto:www.dhagla.com@gmail.com" enctype="text/plain">
+				<input class="un " type="email" align="center" name="mail" placeholder="Email" value="www.dhagla.com@gmail.com" hidden>
 				<input class="un " type="text" align="center" name="subject" placeholder="Subject">
 				<textarea cols="40" rows="10" class="un" name="body" placeholder="Message"></textarea>
 				<input type="submit" name="btnsubmit" class="submit" align="center" value="Send">
@@ -61,35 +71,20 @@
 		<!-- contact us mail send end -->
 
 		<!-- Map start -->
-		<section class="main">
-			<div id="wrapper-9cd199b9cc5410cd3b1ad21cab2e54d3">
-				<div id="map-9cd199b9cc5410cd3b1ad21cab2e54d3"></div>
-				<script>(function () {
-					var setting = {"height":538,"width":803,"zoom":7,"queryString":"Gujarat, India","place_id":"ChIJlfcOXx8FWTkRLlJU7YfYG4Y","satellite":false,"centerCoord":[22.435704873010774,71.31966105000002],"cid":"0x861bd887ed54522e","lang":"en","cityUrl":"/india/chotila-79853","id":"map-9cd199b9cc5410cd3b1ad21cab2e54d3","embed_id":"156798"};
-					var d = document;
-					var s = d.createElement('script');
-					s.src = 'https://1map.com/js/script-for-user.js?embed_id=156798';
-					s.async = true;
-					s.onload = function (e) {
-						window.OneMap.initMap(setting)
-					};
-					var to = d.getElementsByTagName('script')[0];
-					to.parentNode.insertBefore(s, to);
-				})();</script><a href="https://1map.com/en/map-embed?embed_id=156798">1 Map</a>
+		<section class="map">
+			<div>
+				<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d238133.15238349585!2d72.68220879099665!3d21.15914250094241!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be04e59411d1563%3A0xfe4558290938b042!2sSurat%2C%20Gujarat!5e0!3m2!1sen!2sin!4v1652268454024!5m2!1sen!2sin" width="800" height="600" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 			</div>
 		</section>
 		<!-- Map end -->
 
-		<!-- Footer start -->
-		<footer>
-			<h2>
-				Copyright &copy; Designed & Developed By 
-				<a href="https://api.whatsapp.com/send?text=Hello, I'm really impressed by your website &phone=919374413322"> <i class="fa fa-whatsapp"></i> Jeni Biliyawala </a> &
-				<a href="https://api.whatsapp.com/send?text=Hello, I'm really impressed by your website &phone=919374413322"> <i class="fa fa-whatsapp"></i> Ashish Choksi</a>
-			</h2>
+		<!-- Footer-->
+		<footer class="py-5 bg-dark">
+			<div class="container"><p class="m-0 text-center text-white">Copyright &copy; Dhagla™ 2022</p></div>
 		</footer>
-		<!-- Footer end -->
-
-	</article>
-</body>
+		<!-- Bootstrap core JS-->
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+		<!-- Core theme JS-->
+		<script src="js/scripts.js"></script>
+	</body>
 </html>
