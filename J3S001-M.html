@@ -59,7 +59,7 @@
 		<section class="py-5">
 			<div class="container px-4 px-lg-5 my-5">
 				<div class="row gx-4 gx-lg-5 align-items-center">
-					<div class="col-md-6"><img class="card-img-top mb-5 mb-md-0" src="assets/image/J3S001/M-BLACK-1.jpg" alt="..." /></div>
+					<div class="col-md-6"><img id="product-image" class="card-img-top mb-5 mb-md-0" src="assets/image/J3S001/M-BLACK-1.jpg" alt="..." /></div>
 					<div class="col-md-6">
 						<div class="small mb-1">SKU: <span id="skucode">abcxyz</span></div>
 						<h1 class="display-5 fw-bolder">Plain Men Tshirt</h1>
@@ -71,11 +71,11 @@
 						<div class="row">
 							<div class="col-md-2">Colour:</div>
 							<div class="col-md-10">
-								<input id="colourCode-black" name="colourCode" type="radio" onclick="changesku()" value="BLACK" checked/>Black <br/>
-								<input id="colourCode-navy" name="colourCode" type="radio" onclick="changesku()" value="MAROON" />Maroon <br/>
-								<input id="colourCode-navy" name="colourCode" type="radio" onclick="changesku()" value="NAVY-BLUE" />Navy Blue <br/>
-								<input id="colourCode-navy" name="colourCode" type="radio" onclick="changesku()" value="RED" />Red <br/>
-								<input id="colourCode-navy" name="colourCode" type="radio" onclick="changesku()" value="YELLOW" />Yellow <br/>
+								<input id="colourCode-black" name="colourCode" type="radio" onclick="changesku(),changeMaleImage()" value="BLACK" checked/>Black <br/>
+								<input id="colourCode-navy" name="colourCode" type="radio" onclick="changesku(),changeMaleImage()" value="MAROON" />Maroon <br/>
+								<input id="colourCode-navy" name="colourCode" type="radio" onclick="changesku(),changeMaleImage()" value="NAVY-BLUE" />Navy Blue <br/>
+								<input id="colourCode-navy" name="colourCode" type="radio" onclick="changesku(),changeMaleImage()" value="RED" />Red <br/>
+								<input id="colourCode-navy" name="colourCode" type="radio" onclick="changesku(),changeMaleImage()" value="YELLOW" />Yellow <br/>
 							</div>
 						</div>
 						<div class="row">
@@ -215,6 +215,14 @@
 			console.log(hrefLink);
 			document.getElementById("skucode").innerHTML=selectedData;            
 			$("#buyNow").attr("href", hrefLink);
+		}
+		function changeMaleImage(){
+			var selectedData="assets/image/J3S001/M-";
+			let radios = document.getElementsByName("colourCode");
+			let selected = Array.from(radios).find(radio => radio.checked);
+			selectedData += selected.value;
+			selectedData += "-1.jpg";
+			document.getElementById("product-image").src=selectedData;
 		}
 	</script>
 </html>
