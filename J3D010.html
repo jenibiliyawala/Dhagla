@@ -28,7 +28,7 @@
 		<section class="py-5">
 			<div class="container px-4 px-lg-5 my-5">
 				<div class="row gx-4 gx-lg-5 align-items-center">
-					<div class="col-md-6"><img id="product-image" class="card-img-top mb-5 mb-md-0" src="assets/image/J3D004/M-BLACK-F-YELLOW.jpg" alt="..." /></div>
+					<div class="col-md-6"><img id="product-image" class="card-img-top mb-5 mb-md-0" src="assets/image/J3D010/M-BLACK-F-YELLOW.jpg" alt="..." /></div>
 					<div class="col-md-6">
 						<div class="small mb-1">SKU: <span id="skucode">abcxyz</span></div>
 						<h1 class="display-5 fw-bolder">Printed Couple Tshirt</h1>
@@ -81,11 +81,11 @@
 							<i class="bi-cart-fill me-1"></i>
 							Buy Now
 						</a>
-						<div class="fs-5 mb-5"><br/>
-							Checkout at <!--<a class="btn btn-outline-dark flex-shrink-0" href="#"><span class="iconify" data-icon="simple-icons:flipkart"></span></a>
-							<a class="btn btn-outline-dark flex-shrink-0" href="#"><span class="iconify" data-icon="ant-design:amazon-square-filled"></span></a> -->
-							<a class="btn btn-outline-dark flex-shrink-0" href="https://meesho.com/urbane-feminine-couple-tshirts/p/29k34t"><span class="iconify" data-icon="arcticons:meesho"></span></a>
-						</div>
+						<!--<div class="fs-5 mb-5"><br/>
+							Checkout at <a class="btn btn-outline-dark flex-shrink-0" href="#"><span class="iconify" data-icon="simple-icons:flipkart"></span></a>
+							<a class="btn btn-outline-dark flex-shrink-0" href="#"><span class="iconify" data-icon="ant-design:amazon-square-filled"></span></a> 
+							<a class="btn btn-outline-dark flex-shrink-0" href="#"><span class="iconify" data-icon="arcticons:meesho"></span></a>
+						</div>-->
 					</div>
 				</div>
 			</div>
@@ -102,7 +102,7 @@
 			changeImage();
 		}
 		function changesku(){
-			var selectedData="J3D004-TSHIRT-M-";
+			var selectedData="J3D010-TSHIRT-M-";
 
 			let radios = document.getElementsByName("colourCode-M");
 			let selected = Array.from(radios).find(radio => radio.checked);
@@ -131,7 +131,7 @@
 			$("#buyNow").attr("href", hrefLink);
 		}
 		function changeMaleImage(){
-			var selectedData="assets/image/J3D004/M-";
+			var selectedData="assets/image/J3D010/M-";
 
 			let radios = document.getElementsByName("colourCode-M");
 			let male = Array.from(radios).find(radio => radio.checked);
@@ -148,7 +148,7 @@
 			document.getElementById("product-image").src=selectedData;
 		}
 		function changeFemaleImage(){
-			var selectedData="assets/image/J3D004/M-";
+			var selectedData="assets/image/J3D010/M-";
 
 			let radios = document.getElementsByName("colourCode-M");
 			let male = Array.from(radios).find(radio => radio.checked);
