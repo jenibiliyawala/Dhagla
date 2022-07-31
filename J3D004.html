@@ -28,7 +28,7 @@
 		<section class="py-5">
 			<div class="container px-4 px-lg-5 my-5">
 				<div class="row gx-4 gx-lg-5 align-items-center">
-					<div class="col-md-6"><img id="product-image" class="card-img-top mb-5 mb-md-0" src="assets/image/J3D004/M-BLACK-F-YELLOW.jpg" alt="..." /></div>
+					<div class="col-md-6"><img id="product-image" class="card-img-top mb-5 mb-md-0" src="assets/image/J3D004/M-BLACK-F-BLACK.jpg" alt="..." /></div>
 					<div class="col-md-6">
 						<div class="small mb-1">SKU: <span id="skucode">abcxyz</span></div>
 						<h1 class="display-5 fw-bolder">Printed Couple Tshirt</h1>
@@ -40,11 +40,11 @@
 						<div class="row">
 							<div class="col-md-3">Men Tshirt Colour:</div>
 							<div class="col-md-9">
-								<input id="colourCode-M-black" name="colourCode-M" type="radio" onclick="changesku(),changeMaleImage()" value="BLACK" checked/>Black <br/>
-								<input id="colourCode-M-navy" name="colourCode-M" type="radio" onclick="changesku(),changeMaleImage()" value="MAROON" />Maroon <br/>
-								<input id="colourCode-M-navy" name="colourCode-M" type="radio" onclick="changesku(),changeMaleImage()" value="NAVY-BLUE" />Navy Blue <br/>
-								<input id="colourCode-M-navy" name="colourCode-M" type="radio" onclick="changesku(),changeMaleImage()" value="RED" />Red <br/>
-								<input id="colourCode-M-navy" name="colourCode-M" type="radio" onclick="changesku(),changeMaleImage()" value="YELLOW" />Yellow <br/>
+								<input id="colourCode-M-black" name="colourCode-M" type="radio" onclick="changesku(),changeImage()" value="BLACK" checked/>Black <br/>
+								<input id="colourCode-M-navy" name="colourCode-M" type="radio" onclick="changesku(),changeImage()" value="MAROON" />Maroon <br/>
+								<input id="colourCode-M-navy" name="colourCode-M" type="radio" onclick="changesku(),changeImage()" value="NAVY-BLUE" />Navy Blue <br/>
+								<input id="colourCode-M-navy" name="colourCode-M" type="radio" onclick="changesku(),changeImage()" value="RED" />Red <br/>
+								<input id="colourCode-M-navy" name="colourCode-M" type="radio" onclick="changesku(),changeImage()" value="YELLOW" />Yellow <br/>
 							</div>
 						</div><br/>
 						<div class="row">
@@ -60,11 +60,11 @@
 						<div class="row">
 							<div class="col-md-3">Women Tshirt Colour:</div>
 							<div class="col-md-9">
-								<input id="colourCode-F-black" name="colourCode-F" type="radio" onclick="changesku(),changeFemaleImage()" value="BLACK" checked/>Black <br/>
-								<input id="colourCode-F-navy" name="colourCode-F" type="radio" onclick="changesku(),changeFemaleImage()" value="MAROON" />Maroon <br/>
-								<input id="colourCode-F-navy" name="colourCode-F" type="radio" onclick="changesku(),changeFemaleImage()" value="NAVY-BLUE" />Navy Blue <br/>
-								<input id="colourCode-F-navy" name="colourCode-F" type="radio" onclick="changesku(),changeFemaleImage()" value="RED" />Red <br/>
-								<input id="colourCode-F-navy" name="colourCode-F" type="radio" onclick="changesku(),changeFemaleImage()" value="YELLOW" />Yellow <br/>
+								<input id="colourCode-F-black" name="colourCode-F" type="radio" onclick="changesku(),changeImage()" value="BLACK" checked/>Black <br/>
+								<input id="colourCode-F-navy" name="colourCode-F" type="radio" onclick="changesku(),changeImage()" value="MAROON" />Maroon <br/>
+								<input id="colourCode-F-navy" name="colourCode-F" type="radio" onclick="changesku(),changeImage()" value="NAVY-BLUE" />Navy Blue <br/>
+								<input id="colourCode-F-navy" name="colourCode-F" type="radio" onclick="changesku(),changeImage()" value="RED" />Red <br/>
+								<input id="colourCode-F-navy" name="colourCode-F" type="radio" onclick="changesku(),changeImage()" value="YELLOW" />Yellow <br/>
 							</div>
 						</div><br/>
 						<div class="row">
@@ -130,39 +130,19 @@
 			document.getElementById("skucode").innerHTML=selectedData;            
 			$("#buyNow").attr("href", hrefLink);
 		}
-		function changeMaleImage(){
+		function changeImage(){
 			var selectedData="assets/image/J3D004/M-";
 
 			let radios = document.getElementsByName("colourCode-M");
 			let male = Array.from(radios).find(radio => radio.checked);
-			radios = document.getElementsByName("colourCode-F");
-			let female = Array.from(radios).find(radio => radio.checked);
 			selectedData += male.value;
 
-			if(male.value=="YELLOW"){
-				selectedData += "-F-BLACK.jpg";
-			}
-			else{
-				selectedData += "-F-YELLOW.jpg";
-			}
-			document.getElementById("product-image").src=selectedData;
-		}
-		function changeFemaleImage(){
-			var selectedData="assets/image/J3D004/M-";
-
-			let radios = document.getElementsByName("colourCode-M");
-			let male = Array.from(radios).find(radio => radio.checked);
 			radios = document.getElementsByName("colourCode-F");
 			let female = Array.from(radios).find(radio => radio.checked);
-			
-			if(female.value=="YELLOW"){
-				selectedData += "BLACK-F-";
-			}
-			else{
-				selectedData += "YELLOW-F-";
-			}
+			selectedData += "-F-";	
 			selectedData += female.value;
 			selectedData += ".jpg";
+			
 			document.getElementById("product-image").src=selectedData;
 		}
 	</script>
