@@ -72,12 +72,12 @@
 							<div class="col-md-2">Colour:</div>
 							<div class="col-md-10">
 								<input id="colourCode-black" name="colourCode" type="radio" onclick="changesku(),changeFemaleImage()" value="BLACK" checked/>Black <br/>
-								<input id="colourCode-navy" name="colourCode" type="radio" onclick="changesku(),changeFemaleImage()" value="MAROON" />Maroon <br/>
-								<input id="colourCode-navy" name="colourCode" type="radio" onclick="changesku(),changeFemaleImage()" value="NAVY-BLUE" />Navy Blue <br/>
-								<input id="colourCode-navy" name="colourCode" type="radio" onclick="changesku(),changeFemaleImage()" value="RED" />Red <br/>
-								<input id="colourCode-navy" name="colourCode" type="radio" onclick="changesku(),changeFemaleImage()" value="YELLOW" />Yellow <br/>
+								<input id="colourCode-maroon" name="colourCode" type="radio" onclick="changesku(),changeFemaleImage()" value="MAROON" />Maroon <br/>
+								<input id="colourCode-navyblue" name="colourCode" type="radio" onclick="changesku(),changeFemaleImage()" value="NAVY-BLUE" />Navy Blue <br/>
+								<input id="colourCode-red" name="colourCode" type="radio" onclick="changesku(),changeFemaleImage()" value="RED" />Red <br/>
+								<input id="colourCode-yellow" name="colourCode" type="radio" onclick="changesku(),changeFemaleImage()" value="YELLOW" />Yellow <br/>
 							</div>
-						</div>
+						</div><br/>
 						<div class="row">
 							<div class="col-md-2">Size:</div>
 							<div class="col-md-10">
@@ -217,7 +217,7 @@
 			$("#buyNow").attr("href", hrefLink);
 		}
 		function changeFemaleImage(){
-			var selectedData="assets/image/J3S001/M-";
+			var selectedData="assets/image/J3S001/F-";
 			let radios = document.getElementsByName("colourCode");
 			let selected = Array.from(radios).find(radio => radio.checked);
 			selectedData += selected.value;
