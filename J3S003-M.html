@@ -29,10 +29,10 @@
 		<section class="py-0">
 			<div class="container px-4 px-lg-5 my-0">
 				<div class="row gx-4 gx-lg-5 align-items-center">
-					<div class="col-md-6"><img id="product-image" class="card-img-top mb-5 mb-md-0" src="assets/image/J3S002/F-BLACK-1.jpg" alt="..." /></div>
+					<div class="col-md-6"><img id="product-image" class="card-img-top mb-5 mb-md-0" src="assets/image/J3S003/M-BLACK-1.jpg" alt="..." /></div>
 					<div class="col-md-6">
 						<div class="small mb-1">SKU: <span id="skucode">abcxyz</span></div>
-						<h1 class="display-5 fw-bolder">Camera Love Women's Tshirt</h1>
+						<h1 class="display-5 fw-bolder">Sher Men's Tshirt</h1>
 						<div class="fs-5 mb-5">
 							<span class="text-decoration-line-through">1150₹</span>
 							<span>699₹</span>
@@ -41,11 +41,11 @@
 						<div class="row">
 							<div class="col-md-2">Colour:</div>
 							<div class="col-md-10">
-								<input id="colourCode-black" name="colourCode" type="radio" onclick="changesku(),changeFemaleImage()" value="BLACK" checked/>Black <br/>
-								<input id="colourCode-maroon" name="colourCode" type="radio" onclick="changesku(),changeFemaleImage()" value="MAROON" />Maroon <br/>
-								<input id="colourCode-navyblue" name="colourCode" type="radio" onclick="changesku(),changeFemaleImage()" value="NAVY-BLUE" />Navy Blue <br/>
-								<input id="colourCode-red" name="colourCode" type="radio" onclick="changesku(),changeFemaleImage()" value="RED" />Red <br/>
-								<input id="colourCode-yellow" name="colourCode" type="radio" onclick="changesku(),changeFemaleImage()" value="YELLOW" />Yellow <br/>
+								<input id="colourCode-black" name="colourCode" type="radio" onclick="changesku(),changeMaleImage()" value="BLACK" checked/>Black <br/>
+								<input id="colourCode-maroon" name="colourCode" type="radio" onclick="changesku(),changeMaleImage()" value="MAROON" />Maroon <br/>
+								<input id="colourCode-navyblue" name="colourCode" type="radio" onclick="changesku(),changeMaleImage()" value="NAVY-BLUE" />Navy Blue <br/>
+								<input id="colourCode-red" name="colourCode" type="radio" onclick="changesku(),changeMaleImage()" value="RED" />Red <br/>
+								<input id="colourCode-yellow" name="colourCode" type="radio" onclick="changesku(),changeMaleImage()" value="YELLOW" />Yellow <br/>
 							</div>
 						</div><br/>
 						<div class="row">
@@ -63,9 +63,9 @@
 							Buy Now
 						</a>
 						<!-- <div class="fs-5 mb-5"><br/>
-							Checkout at <a class="btn btn-outline-dark flex-shrink-0" href="https://www.flipkart.com/dhagla-solid-women-round-neck-black-t-shirt/p/itm2b1d7a09c8cde?pid=TSHGFGF5XJFQGDPR"><span class="iconify" data-icon="simple-icons:flipkart"></span></a>
+							Checkout at <a class="btn btn-outline-dark flex-shrink-0" href="https://www.flipkart.com/dhagla-solid-men-round-neck-black-t-shirt/p/itm6e1e1012d2525?pid=TSHGFG6G5RQYHRHQ"><span class="iconify" data-icon="simple-icons:flipkart"></span></a>
 							<a class="btn btn-outline-dark flex-shrink-0" href="#"><span class="iconify" data-icon="ant-design:amazon-square-filled"></span></a>
-							<a class="btn btn-outline-dark flex-shrink-0" href="https://meesho.com/urbane-latest-women-tshirts/p/29jy9n"><span class="iconify" data-icon="arcticons:meesho"></span></a>
+							<a class="btn btn-outline-dark flex-shrink-0" href="https://meesho.com/stylish-elegant-men-tshirts/p/29qb3m"><span class="iconify" data-icon="arcticons:meesho"></span></a>
 						</div>-->
 					</div>
 				</div>
@@ -82,7 +82,7 @@
 			changesku();
 		}
 		function changesku(){
-			var selectedData="J3S002-TSHIRT-F-";
+			var selectedData="J3S003-TSHIRT-M-";
 
 			let radios = document.getElementsByName("colourCode");
 			let selected = Array.from(radios).find(radio => radio.checked);
@@ -99,14 +99,13 @@
 			document.getElementById("skucode").innerHTML=selectedData;            
 			$("#buyNow").attr("href", hrefLink);
 		}
-		function changeFemaleImage(){
-			var selectedData="assets/image/J3S002/F-";
+		function changeMaleImage(){
+			var selectedData="assets/image/J3S003/M-";
 			let radios = document.getElementsByName("colourCode");
 			let selected = Array.from(radios).find(radio => radio.checked);
 			selectedData += selected.value;
 			selectedData += "-1.jpg";
 			document.getElementById("product-image").src=selectedData;
 		}
-
 	</script>
 </html>

@@ -29,10 +29,10 @@
 		<section class="py-0">
 			<div class="container px-4 px-lg-5 my-0">
 				<div class="row gx-4 gx-lg-5 align-items-center">
-					<div class="col-md-6"><img id="product-image" class="card-img-top mb-5 mb-md-0" src="assets/image/J3S002/F-BLACK-1.jpg" alt="..." /></div>
+					<div class="col-md-6"><img id="product-image" class="card-img-top mb-5 mb-md-0" src="assets/image/J3S003/F-BLACK-1.jpg" alt="..." /></div>
 					<div class="col-md-6">
 						<div class="small mb-1">SKU: <span id="skucode">abcxyz</span></div>
-						<h1 class="display-5 fw-bolder">Camera Love Women's Tshirt</h1>
+						<h1 class="display-5 fw-bolder">Sherni Women's Tshirt</h1>
 						<div class="fs-5 mb-5">
 							<span class="text-decoration-line-through">1150₹</span>
 							<span>699₹</span>
@@ -82,7 +82,7 @@
 			changesku();
 		}
 		function changesku(){
-			var selectedData="J3S002-TSHIRT-F-";
+			var selectedData="J3S003-TSHIRT-F-";
 
 			let radios = document.getElementsByName("colourCode");
 			let selected = Array.from(radios).find(radio => radio.checked);
@@ -100,7 +100,7 @@
 			$("#buyNow").attr("href", hrefLink);
 		}
 		function changeFemaleImage(){
-			var selectedData="assets/image/J3S002/F-";
+			var selectedData="assets/image/J3S003/F-";
 			let radios = document.getElementsByName("colourCode");
 			let selected = Array.from(radios).find(radio => radio.checked);
 			selectedData += selected.value;
