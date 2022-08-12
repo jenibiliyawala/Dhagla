@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+		<meta name="description" content="J3-K-RAM GROUP OF COMPANY" />
+		<meta name="author" content="DHAGLA - Jeni Biliyawala" />
+		<title>Buy Customised Products | Dhagla</title>
+		<link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
+		<link href="CSS/styles.css" rel="stylesheet" />
+
+		<script src="https://code.iconify.design/2/2.2.1/iconify.min.js"></script>
+	</head>
+	<body>
+		<nav class="navbar navbar-expand-lg navbar-light bg-dark">
+			<div class="container px-4 px-lg-5">
+				<img src="assets/image/dhagla.png" class="logo-img"  height="60">
+				<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+				<div class="collapse navbar-collapse" id="navbarSupportedContent">
+					<ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-lg-4">
+						<li class="nav-item"><a class="nav-link" style="color:white;" aria-current="page" href="index.html">Home</a></li>
+						<li class="nav-item"><a class="nav-link" style="color:white;" href="contactus.html">Contact us</a></li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+		<section class="py-0">
+			<div class="container px-4 px-lg-5 my-0">
+				<div class="row gx-4 gx-lg-5 align-items-center">
+					<div class="col-md-6"><img id="product-image" class="card-img-top mb-5 mb-md-0" src="assets/image/J3S010/F-BLACK-1.jpg" alt="..." /></div>
+					<div class="col-md-6">
+						<div class="small mb-1">SKU: <span id="skucode">abcxyz</span></div>
+						<h1 class="display-5 fw-bolder">Mighty Raju Women's Tshirt</h1>
+						<div class="fs-5 mb-5">
+							<span class="text-decoration-line-through">1150₹</span>
+							<span>699₹</span>
+						</div>
+						<p class="lead">Pure cotton, round neck, premium quality, printed t-shirt. This package contains one tshirt as shown in picture, also if you want any specific customisation then you have to contact us..</p><br/>
+						<div class="row">
+							<div class="col-md-2">Colour:</div>
+							<div class="col-md-10">
+								<input id="colourCode-black" name="colourCode" type="radio" onclick="changesku(),changeFemaleImage()" value="BLACK" checked/>Black <br/>
+								<input id="colourCode-maroon" name="colourCode" type="radio" onclick="changesku(),changeFemaleImage()" value="MAROON" />Maroon <br/>
+								<input id="colourCode-navyblue" name="colourCode" type="radio" onclick="changesku(),changeFemaleImage()" value="NAVY-BLUE" />Navy Blue <br/>
+								<input id="colourCode-red" name="colourCode" type="radio" onclick="changesku(),changeFemaleImage()" value="RED" />Red <br/>
+								<input id="colourCode-yellow" name="colourCode" type="radio" onclick="changesku(),changeFemaleImage()" value="YELLOW" />Yellow <br/>
+							</div>
+						</div><br/>
+						<div class="row">
+							<div class="col-md-2">Size:</div>
+							<div class="col-md-10">
+								<input id="sizeCode-S" name="sizeCode" type="radio" onclick="changesku()" value="S"/>S <br/>
+								<input id="sizeCode-M" name="sizeCode" type="radio" onclick="changesku()" value="M" checked/>M <br/>
+								<input id="sizeCode-L" name="sizeCode" type="radio" onclick="changesku()" value="L" />L <br/>
+								<input id="sizeCode-XL" name="sizeCode" type="radio" onclick="changesku()" value="XL" />XL <br/>
+								<input id="sizeCode-XXL" name="sizeCode" type="radio" onclick="changesku()" value="XXL" />XXL
+							</div>
+						</div><br/>
+						<a id="buyNow" class="btn btn-outline-dark flex-shrink-0" type="button" href="#">
+							<i class="bi-cart-fill me-1"></i>
+							Buy Now
+						</a>
+						<!-- <div class="fs-5 mb-5"><br/>
+							Checkout at <a class="btn btn-outline-dark flex-shrink-0" href="https://www.flipkart.com/dhagla-solid-women-round-neck-black-t-shirt/p/itm2b1d7a09c8cde?pid=TSHGFGF5XJFQGDPR"><span class="iconify" data-icon="simple-icons:flipkart"></span></a>
+							<a class="btn btn-outline-dark flex-shrink-0" href="#"><span class="iconify" data-icon="ant-design:amazon-square-filled"></span></a>
+							<a class="btn btn-outline-dark flex-shrink-0" href="https://meesho.com/urbane-latest-women-tshirts/p/29jy9n"><span class="iconify" data-icon="arcticons:meesho"></span></a>
+						</div>-->
+					</div>
+				</div>
+			</div>
+		</section>
+		<footer class="py-5 bg-dark">
+			<div class="container"><p class="m-0 text-center text-white">Copyright &copy; Dhagla™ 2022</p></div>
+		</footer>
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+		<script src="js/scripts.js"></script>
+	</body>
+	<script>
+		window.onload = function() {
+			changesku();
+		}
+		function changesku(){
+			var selectedData="J3S010-TSHIRT-F-";
+
+			let radios = document.getElementsByName("colourCode");
+			let selected = Array.from(radios).find(radio => radio.checked);
+			selectedData += selected.value;
+
+			selectedData += "-";
+
+			radios = document.getElementsByName("sizeCode");
+			selected = Array.from(radios).find(radio => radio.checked);
+			selectedData += selected.value;
+
+			let hrefLink = "https://api.whatsapp.com/send?text=Hello, I want to buy "+selectedData+". &phone=919909913322"
+			console.log(hrefLink);
+			document.getElementById("skucode").innerHTML=selectedData;            
+			$("#buyNow").attr("href", hrefLink);
+		}
+		function changeFemaleImage(){
+			var selectedData="assets/image/J3S010/F-";
+			let radios = document.getElementsByName("colourCode");
+			let selected = Array.from(radios).find(radio => radio.checked);
+			selectedData += selected.value;
+			selectedData += "-1.jpg";
+			document.getElementById("product-image").src=selectedData;
+		}
+
+	</script>
+</html>
