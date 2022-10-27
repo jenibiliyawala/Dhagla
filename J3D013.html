@@ -81,11 +81,11 @@
 							<i class="bi-cart-fill me-1"></i>
 							Buy Now
 						</a>
-						<!--<div class="fs-5 mb-5"><br/>
-							Checkout at <a class="btn btn-outline-dark flex-shrink-0" href="#"><span class="iconify" data-icon="simple-icons:flipkart"></span></a>
-							<a class="btn btn-outline-dark flex-shrink-0" href="#"><span class="iconify" data-icon="ant-design:amazon-square-filled"></span></a> 
-							<a class="btn btn-outline-dark flex-shrink-0" href="#"><span class="iconify" data-icon="arcticons:meesho"></span></a>
-						</div>-->
+						<div class="fs-5 mb-5"><br/>
+							Checkout at <a id="flipkartButton" class="btn btn-outline-dark flex-shrink-0" href="#"><span class="iconify" data-icon="simple-icons:flipkart"></span> Flipkart</a>
+							<!-- <a id="amazonButton" class="btn btn-outline-dark flex-shrink-0" href="#"><span class="iconify" data-icon="ant-design:amazon-square-filled"></span> Amazon</a>  -->
+							<!-- <a id="meeshoButton" class="btn btn-outline-dark flex-shrink-0" href="#"><span class="iconify" data-icon="arcticons:meesho"> Meesho</span></a> -->
+						</div>
 					</div>
 				</div>
 			</div>
@@ -144,6 +144,70 @@
 			selectedData += ".jpg";
 			
 			document.getElementById("product-image").src=selectedData;
+			addFlipkartButton();
+		}
+		function addFlipkartButton(){
+			var buttonLink="";
+
+			let radios = document.getElementsByName("colourCode-M");
+			let maleColor = Array.from(radios).find(radio => radio.checked);
+			
+			radios = document.getElementsByName("colourCode-F");
+			let femaleColor = Array.from(radios).find(radio => radio.checked);
+			
+			if (maleColor.value == "BLACK" && femaleColor.value == "BLACK") {
+				buttonLink="https://www.flipkart.com/dhagla-printed-couple-round-neck-multicolor-t-shirt/p/itm0a8d2c5e620d6?pid=TSHGJ5CD3SEVZSTP&cmpid=product.share.pp&_refId=PP.4e7ffe1c-910f-4afa-a041-937313abb584.TSHGJ5CD3SEVZSTP&_appId=CL";
+			} else if (maleColor.value == "BLACK" && femaleColor.value == "MAROON") {
+				buttonLink="https://www.flipkart.com/dhagla-printed-couple-round-neck-multicolor-t-shirt/p/itmba88bf5747687?pid=TSHGJ5CDFYHMFVAB&lid=LSTTSHGJ5CDFYHMFVABGF56ZS&marketplace=FLIPKART&sattr[]=color&st=color";
+			} else if (maleColor.value == "BLACK" && femaleColor.value == "NAVY-BLUE") {
+				buttonLink="https://www.flipkart.com/dhagla-printed-couple-round-neck-multicolor-t-shirt/p/itm81250aaedec4b?pid=TSHGJ5CDQQVEDPWV&lid=LSTTSHGJ5CDQQVEDPWV8CGIHX&marketplace=FLIPKART&sattr[]=color&st=color";
+			} else if (maleColor.value == "BLACK" && femaleColor.value == "RED") {
+				buttonLink="https://www.flipkart.com/dhagla-printed-couple-round-neck-multicolor-t-shirt/p/itmc60e877499197?pid=TSHGJ5CDRDZPMHA8&lid=LSTTSHGJ5CDRDZPMHA82WDOB1&marketplace=FLIPKART&sattr[]=color&st=color";
+			} else if (maleColor.value == "BLACK" && femaleColor.value == "YELLOW") {
+				buttonLink="https://www.flipkart.com/dhagla-printed-couple-round-neck-multicolor-t-shirt/p/itm44d8aa0301971?pid=TSHGJ5CDNHG2WEAA&lid=LSTTSHGJ5CDNHG2WEAAEH71N9&marketplace=FLIPKART&sattr[]=color&st=color";
+			} else if (maleColor.value == "MAROON" && femaleColor.value == "BLACK") {
+				buttonLink="https://www.flipkart.com/dhagla-printed-couple-round-neck-multicolor-t-shirt/p/itm085de47817ef5?pid=TSHGJ5CDWNZTFNNJ&lid=LSTTSHGJ5CDWNZTFNNJMPZDJR&marketplace=FLIPKART&sattr[]=color&st=color";
+			} else if (maleColor.value == "MAROON" && femaleColor.value == "MAROON") {
+				buttonLink="https://www.flipkart.com/dhagla-printed-couple-round-neck-multicolor-t-shirt/p/itmbd55270bb8c84?pid=TSHGJ5CDJYJPFEH9&lid=LSTTSHGJ5CDJYJPFEH9D6B7XV&marketplace=FLIPKART&sattr[]=color&st=color";
+			} else if (maleColor.value == "MAROON" && femaleColor.value == "NAVY-BLUE") {
+				buttonLink="https://www.flipkart.com/dhagla-printed-couple-round-neck-multicolor-t-shirt/p/itm54930a09511e5?pid=TSHGJ5CDHHKZW3ZD&lid=LSTTSHGJ5CDHHKZW3ZDRIMOIH&marketplace=FLIPKART&sattr[]=color&st=color";
+			} else if (maleColor.value == "MAROON" && femaleColor.value == "RED") {
+				buttonLink="https://www.flipkart.com/dhagla-printed-couple-round-neck-multicolor-t-shirt/p/itmeb6e9f984a579?pid=TSHGJ5CDRGHGX7YD&lid=LSTTSHGJ5CDRGHGX7YDXOY0H4&marketplace=FLIPKART&sattr[]=color&st=color";
+			} else if (maleColor.value == "MAROON" && femaleColor.value == "YELLOW") {
+				buttonLink="https://www.flipkart.com/dhagla-printed-couple-round-neck-multicolor-t-shirt/p/itm346d477de3ab7?pid=TSHGJ5CDMSMADYFZ&lid=LSTTSHGJ5CDMSMADYFZE9MRQT&marketplace=FLIPKART&sattr[]=color&st=color";
+			} else if (maleColor.value == "NAVY-BLUE" && femaleColor.value == "BLACK") {
+				buttonLink="https://www.flipkart.com/dhagla-printed-couple-round-neck-multicolor-t-shirt/p/itmc04b89883bcdf?pid=TSHGJ5CDW6FMVVXA&lid=LSTTSHGJ5CDW6FMVVXAMDOBAN&marketplace=FLIPKART&sattr[]=color&st=color";
+			} else if (maleColor.value == "NAVY-BLUE" && femaleColor.value == "MAROON") {
+				buttonLink="https://www.flipkart.com/dhagla-printed-couple-round-neck-multicolor-t-shirt/p/itm9d7a84e568c96?pid=TSHGJ5CD5D4P6PDJ&lid=LSTTSHGJ5CD5D4P6PDJJKAHJF&marketplace=FLIPKART&sattr[]=color&st=color";
+			} else if (maleColor.value == "NAVY-BLUE" && femaleColor.value == "NAVY-BLUE") {
+				buttonLink="https://www.flipkart.com/dhagla-printed-couple-round-neck-multicolor-t-shirt/p/itm5787f9f2a2865?pid=TSHGJ5CDHJS4YFHZ&lid=LSTTSHGJ5CDHJS4YFHZQGQOVF&marketplace=FLIPKART&sattr[]=color&st=color";
+			} else if (maleColor.value == "NAVY-BLUE" && femaleColor.value == "RED") {
+				buttonLink="https://www.flipkart.com/dhagla-printed-couple-round-neck-multicolor-t-shirt/p/itmc33c0d39a981d?pid=TSHGJ5CDYJNT3XYN&lid=LSTTSHGJ5CDYJNT3XYNHDHTD0&marketplace=FLIPKART&sattr[]=color&st=color";
+			} else if (maleColor.value == "NAVY-BLUE" && femaleColor.value == "YELLOW") {
+				buttonLink="https://www.flipkart.com/dhagla-printed-couple-round-neck-multicolor-t-shirt/p/itm2e482c0bb5fa5?pid=TSHGJ5CDJUTFRHVP&lid=LSTTSHGJ5CDJUTFRHVPSNTO9A&marketplace=FLIPKART&sattr[]=color&st=color";
+			} else if (maleColor.value == "RED" && femaleColor.value == "BLACK") {
+				buttonLink="https://www.flipkart.com/dhagla-printed-couple-round-neck-multicolor-t-shirt/p/itm289d5cdd7279b?pid=TSHGJ5CDEGFVUZYC&lid=LSTTSHGJ5CDEGFVUZYCGKEQ1H&marketplace=FLIPKART&sattr[]=color&st=color";
+			} else if (maleColor.value == "RED" && femaleColor.value == "MAROON") {
+				buttonLink="https://www.flipkart.com/dhagla-printed-couple-round-neck-multicolor-t-shirt/p/itmf89387ef943ba?pid=TSHGJ5CDZXV9RZ22&lid=LSTTSHGJ5CDZXV9RZ221J1UXQ&marketplace=FLIPKART&sattr[]=color&st=color";
+			} else if (maleColor.value == "RED" && femaleColor.value == "NAVY-BLUE") {
+				buttonLink="https://www.flipkart.com/dhagla-printed-couple-round-neck-multicolor-t-shirt/p/itm2b9fa1a7c11d8?pid=TSHGJ5CDYEWKTFRJ&lid=LSTTSHGJ5CDYEWKTFRJ2YIQ3S&marketplace=FLIPKART&sattr[]=color&st=color";
+			} else if (maleColor.value == "RED" && femaleColor.value == "RED") {
+				buttonLink="https://www.flipkart.com/dhagla-printed-couple-round-neck-multicolor-t-shirt/p/itm6c49724b594c2?pid=TSHGJ5CDZQ9NVCGP&lid=LSTTSHGJ5CDZQ9NVCGPME4JAN&marketplace=FLIPKART&sattr[]=color&st=color";
+			} else if (maleColor.value == "RED" && femaleColor.value == "YELLOW") {
+				buttonLink="https://www.flipkart.com/dhagla-printed-couple-round-neck-multicolor-t-shirt/p/itm31920d6cecbb0?pid=TSHGJ5CDQP3MYPTJ&lid=LSTTSHGJ5CDQP3MYPTJ8TEF4S&marketplace=FLIPKART&sattr[]=color&st=color";
+			} else if (maleColor.value == "YELLOW" && femaleColor.value == "BLACK") {
+				buttonLink="https://www.flipkart.com/dhagla-printed-couple-round-neck-multicolor-t-shirt/p/itm187e5eb51718a?pid=TSHGJ5CD549Z5UKY&lid=LSTTSHGJ5CD549Z5UKYSSQRXS&marketplace=FLIPKART&sattr[]=color&st=color";
+			} else if (maleColor.value == "YELLOW" && femaleColor.value == "MAROON") {
+				buttonLink="https://www.flipkart.com/dhagla-printed-couple-round-neck-multicolor-t-shirt/p/itm3a67e1dfbe010?pid=TSHGJ5CD5AKMNT8J&lid=LSTTSHGJ5CD5AKMNT8JQVXGKM&marketplace=FLIPKART&sattr[]=color&st=color";
+			} else if (maleColor.value == "YELLOW" && femaleColor.value == "NAVY-BLUE") {
+				buttonLink="https://www.flipkart.com/dhagla-printed-couple-round-neck-multicolor-t-shirt/p/itm0d4b9cab43f1d?pid=TSHGJ5CDQWFPZTFH&lid=LSTTSHGJ5CDQWFPZTFHSEPKAO&marketplace=FLIPKART&sattr[]=color&st=color";
+			} else if (maleColor.value == "YELLOW" && femaleColor.value == "RED") {
+				buttonLink="https://www.flipkart.com/dhagla-printed-couple-round-neck-multicolor-t-shirt/p/itm4fa961a65b1d1?pid=TSHGJ5CDXTANSSWU&lid=LSTTSHGJ5CDXTANSSWUZYLPFX&marketplace=FLIPKART&sattr[]=color&st=color";
+			} else if (maleColor.value == "YELLOW" && femaleColor.value == "YELLOW") {
+				buttonLink="https://www.flipkart.com/dhagla-printed-couple-round-neck-multicolor-t-shirt/p/itme7259cbca1bf9?pid=TSHGJ5CDGS9EE9WS&lid=LSTTSHGJ5CDGS9EE9WS1QS0RP&marketplace=FLIPKART&sattr[]=color&st=color";
+			}
+
+			document.getElementById("flipkartButton").href=buttonLink;
 		}
 	</script>
 </html>
