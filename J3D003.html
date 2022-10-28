@@ -145,6 +145,7 @@
 			
 			document.getElementById("product-image").src=selectedData;
 			addFlipkartButton();
+			addMeeshoButton();
 		}
 		function addFlipkartButton(){
 			var buttonLink="";
@@ -208,6 +209,19 @@
 			}
 
 			document.getElementById("flipkartButton").href=buttonLink;
+		}
+		function addMeeshoButton(){
+			var buttonLink="";
+
+			let radios = document.getElementsByName("colourCode-M");
+			let maleColor = Array.from(radios).find(radio => radio.checked);
+			
+			radios = document.getElementsByName("colourCode-F");
+			let femaleColor = Array.from(radios).find(radio => radio.checked);
+			
+			
+
+			document.getElementById("meeshoButton").href=buttonLink;
 		}
 	</script>
 </html>
