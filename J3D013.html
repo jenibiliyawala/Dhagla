@@ -84,7 +84,7 @@
 						<div class="fs-5 mb-5"><br/>
 							Checkout at <a id="flipkartButton" class="btn btn-outline-dark flex-shrink-0" href="#"><span class="iconify" data-icon="simple-icons:flipkart"></span> Flipkart</a>
 							<!-- <a id="amazonButton" class="btn btn-outline-dark flex-shrink-0" href="#"><span class="iconify" data-icon="ant-design:amazon-square-filled"></span> Amazon</a>  -->
-							<!-- <a id="meeshoButton" class="btn btn-outline-dark flex-shrink-0" href="#"><span class="iconify" data-icon="arcticons:meesho"></span> Meesho</a> -->
+							<a id="meeshoButton" class="btn btn-outline-dark flex-shrink-0" href="#"><span class="iconify" data-icon="arcticons:meesho"></span> Meesho</a>
 						</div>
 					</div>
 				</div>
@@ -219,7 +219,57 @@
 			radios = document.getElementsByName("colourCode-F");
 			let femaleColor = Array.from(radios).find(radio => radio.checked);
 			
-			
+			if (maleColor.value == "BLACK" && femaleColor.value == "BLACK") {
+				buttonLink="https://www.meesho.com/dhagla-round-neck-pure-cotton-couple-printed-t-shirt-black-and-black-couple-tshirts/p/30zugg";
+			} else if (maleColor.value == "BLACK" && femaleColor.value == "MAROON") {
+				buttonLink="https://www.meesho.com/dhagla-round-neck-pure-cotton-couple-printed-t-shirt-black-and-maroon-couple-tshirts/p/30zug7";
+			} else if (maleColor.value == "BLACK" && femaleColor.value == "NAVY-BLUE") {
+				buttonLink="https://www.meesho.com/dhagla-round-neck-pure-cotton-couple-printed-t-shirt-black-and-navy-blue-couple-tshirts/p/30zug9";
+			} else if (maleColor.value == "BLACK" && femaleColor.value == "RED") {
+				buttonLink="https://www.meesho.com/dhagla-round-neck-pure-cotton-couple-printed-t-shirt-black-and-red-couple-tshirts/p/30zug8";
+			} else if (maleColor.value == "BLACK" && femaleColor.value == "YELLOW") {
+				buttonLink="https://www.meesho.com/dhagla-round-neck-pure-cotton-couple-printed-t-shirt-black-and-yellow-couple-tshirts/p/30zuga";
+			} else if (maleColor.value == "MAROON" && femaleColor.value == "BLACK") {
+				buttonLink="https://www.meesho.com/dhagla-round-neck-pure-cotton-couple-printed-t-shirt-maroon-and-blackcouple-tshirts/p/30zug3";
+			} else if (maleColor.value == "MAROON" && femaleColor.value == "MAROON") {
+				buttonLink="https://www.meesho.com/dhagla-round-neck-pure-cotton-couple-printed-t-shirt-maroon-and-marooncouple-tshirts/p/30zug2";
+			} else if (maleColor.value == "MAROON" && femaleColor.value == "NAVY-BLUE") {
+				buttonLink="https://www.meesho.com/dhagla-round-neck-pure-cotton-couple-printed-t-shirt-maroon-and-navy-bluecouple-tshirts/p/30zug6";
+			} else if (maleColor.value == "MAROON" && femaleColor.value == "RED") {
+				buttonLink="https://www.meesho.com/dhagla-round-neck-pure-cotton-couple-printed-t-shirt-maroon-and-redcouple-tshirts/p/30zug4";
+			} else if (maleColor.value == "MAROON" && femaleColor.value == "YELLOW") {
+				buttonLink="https://www.meesho.com/dhagla-round-neck-pure-cotton-couple-printed-t-shirt-maroon-and-yellowcouple-tshirts/p/30zug5";
+			} else if (maleColor.value == "NAVY-BLUE" && femaleColor.value == "BLACK") {
+				buttonLink="https://www.meesho.com/dhagla-round-neck-pure-cotton-couple-printed-t-shirt-navy-blue-and-black/p/30zugc";
+			} else if (maleColor.value == "NAVY-BLUE" && femaleColor.value == "MAROON") {
+				buttonLink="https://www.meesho.com/dhagla-round-neck-pure-cotton-couple-printed-t-shirt-navy-blue-and-maroon/p/30zugd";
+			} else if (maleColor.value == "NAVY-BLUE" && femaleColor.value == "NAVY-BLUE") {
+				buttonLink="https://www.meesho.com/dhagla-round-neck-pure-cotton-couple-printed-t-shirt-navy-blue-and-navy-blue/p/30zugb";
+			} else if (maleColor.value == "NAVY-BLUE" && femaleColor.value == "RED") {
+				buttonLink="https://www.meesho.com/dhagla-round-neck-pure-cotton-couple-printed-t-shirt-navy-blue-and-red/p/30zuge";
+			} else if (maleColor.value == "NAVY-BLUE" && femaleColor.value == "YELLOW") {
+				buttonLink="https://www.meesho.com/dhagla-round-neck-pure-cotton-couple-printed-t-shirt-navy-blue-and-yellow/p/30zugi";
+			} else if (maleColor.value == "RED" && femaleColor.value == "BLACK") {
+				buttonLink="https://www.meesho.com/dhagla-round-neck-pure-cotton-couple-printed-t-shirt-red-and-black/p/30zugl";
+			} else if (maleColor.value == "RED" && femaleColor.value == "MAROON") {
+				buttonLink="https://www.meesho.com/dhagla-round-neck-pure-cotton-couple-printed-t-shirt-red-and-maroon/p/30zugk";
+			} else if (maleColor.value == "RED" && femaleColor.value == "NAVY-BLUE") {
+				buttonLink="https://www.meesho.com/dhagla-round-neck-pure-cotton-couple-printed-t-shirt-red-and-navy-blue/p/30zugf";
+			} else if (maleColor.value == "RED" && femaleColor.value == "RED") {
+				buttonLink="https://www.meesho.com/dhagla-round-neck-pure-cotton-couple-printed-t-shirt-red-and-red/p/30zugh";
+			} else if (maleColor.value == "RED" && femaleColor.value == "YELLOW") {
+				buttonLink="https://www.meesho.com/dhagla-round-neck-pure-cotton-couple-printed-t-shirt-red-and-yellow/p/30zugj";
+			} else if (maleColor.value == "YELLOW" && femaleColor.value == "BLACK") {
+				buttonLink="https://www.meesho.com/dhagla-round-neck-pure-cotton-couple-printed-t-shirt-yellow-and-black/p/30zugs";
+			} else if (maleColor.value == "YELLOW" && femaleColor.value == "MAROON") {
+				buttonLink="https://www.meesho.com/dhagla-round-neck-pure-cotton-couple-printed-t-shirt-yellow-and-maroon/p/30zugu";
+			} else if (maleColor.value == "YELLOW" && femaleColor.value == "NAVY-BLUE") {
+				buttonLink="https://www.meesho.com/dhagla-round-neck-pure-cotton-couple-printed-t-shirt-yellow-and-navy-blue/p/30zugw";
+			} else if (maleColor.value == "YELLOW" && femaleColor.value == "RED") {
+				buttonLink="https://www.meesho.com/dhagla-round-neck-pure-cotton-couple-printed-t-shirt-yellow-and-red/p/30zugt";
+			} else if (maleColor.value == "YELLOW" && femaleColor.value == "YELLOW") {
+				buttonLink="https://www.meesho.com/dhagla-round-neck-pure-cotton-couple-printed-t-shirt-yellow-and-yellow/p/30zugv";
+			}
 
 			document.getElementById("meeshoButton").href=buttonLink;
 		}
